@@ -1,0 +1,19 @@
+[package]
+name = "gateway"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# Workspace Inherited
+tokio = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+anyhow = { workspace = true }
+tracing = { workspace = true }
+
+# Gateway Specific
+axum = "0.8.8"  # Latest stable
+tower-http = { version = "0.6.2", features = ["trace", "cors"] } # Matched to Axum 0.8
+jsonwebtoken = "9.3.0"
+dotenvy = "0.15.7"
+core = { path = "../core" }

@@ -1,0 +1,19 @@
+[package]
+name = "core"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+anyhow = { workspace = true }
+
+# The Brain & Body Stack (Updated Feb 2026)
+wasmtime = "29.0.0" # Stable, secure baseline for 2026
+wasmtime-wasi = "29.0.0" # Replaces wasi-common
+wit-bindgen = "0.36.0" # Matches Wasmtime 29
+async-openai = "0.27.0"
+qdrant-client = "1.13.0"
+sqlx = { version = "0.8.3", features = ["runtime-tokio-rustls", "sqlite"] }
+async-recursion = "1.1.1"
