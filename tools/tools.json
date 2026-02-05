@@ -1,0 +1,14 @@
+[
+  {
+    "name": "ironclaw_echo",
+    "description": "A test tool that echoes input back to the user.",
+    "binary_path": "target/wasm32-wasip1/release/tools.wasm",
+    "handler": "run",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "input": { "type": "string" }
+      }
+    }
+  }
+]

@@ -1,0 +1,7 @@
+package ironclaw:tools;
+
+world tool {
+    // The Guest (WASM) must export a function called 'run'.
+    // It takes a string (input) and returns a string (output).
+    export run: func(input: string) -> string;
+}

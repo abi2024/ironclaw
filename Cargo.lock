@@ -464,11 +464,13 @@ dependencies = [
  "anyhow",
  "async-openai",
  "async-recursion",
+ "dotenvy",
  "qdrant-client",
  "serde",
  "serde_json",
  "sqlx",
  "tokio",
+ "tracing",
  "wasmtime",
  "wasmtime-wasi",
  "wit-bindgen 0.36.0",
@@ -3466,6 +3468,9 @@ dependencies = [
 [[package]]
 name = "tools"
 version = "0.1.0"
+dependencies = [
+ "wit-bindgen 0.36.0",
+]
 
 [[package]]
 name = "tower"

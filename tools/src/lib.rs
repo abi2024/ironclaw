@@ -1,14 +1,14 @@
-pub fn add(left: u64, right: u64) -> u64 {
-    left + right
-}
+wit_bindgen::generate!({
+    world: "tool",
+});
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+struct MyTool;
 
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
+impl Guest for MyTool {
+    fn run(input: String) -> String {
+        // The Polite Logic: Just echo the input
+        format!("(Guest) IronClaw processed: '{}'", input)
     }
 }
+
+export!(MyTool);

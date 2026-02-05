@@ -1,6 +1,16 @@
 [package]
 name = "tools"
 version = "0.1.0"
-edition = "2024"
+edition = "2021"
+
+# CRITICAL: This tells Rust to build a WASM module, not a standard library
+[lib]
+crate-type = ["cdylib"]
 
 [dependencies]
+# This must match the version used in Core (defined in Master Prompt)
+wit-bindgen = "0.36.0"
+
+# NEW SECTION:
+[package.metadata.component]
+package = "ironclaw:tools"  # Must match the 'package' line in ironclaw.wit
